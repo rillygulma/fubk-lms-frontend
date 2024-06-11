@@ -5,10 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npx vite build",
+    "build": "NODE_OPTIONS=--max_old_space_size=1024 npx vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "postinstall": "npx vite --version"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@chatscope/chat-ui-kit-react": "^1.10.1",
