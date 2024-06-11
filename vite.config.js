@@ -4,18 +4,9 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            return id.toString().split('node_modules/')[1].split('/')[0].toString();
-          }
-        },
-      },
-    },
-    commonjsOptions: {
-      transformMixedEsModules: true,
-    },
-  },
+  server: {
+    port: process.env.PORT || 3000, // Use the PORT environment variable or default to 3000
+    strictPort: true, // Fail if the port is already in use
+    host: '0.0.0.0' // Listen on all addresses, needed for Render
+  }
 });
