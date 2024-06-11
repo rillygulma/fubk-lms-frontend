@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "NODE_OPTIONS=--max_old_space_size=1024 npx vite build",
+    "build": "NODE_OPTIONS=--max_old_space_size=1024 vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "start": "node node_modules/pm2/bin/pm2 start 'npm run dev' --name my-app --watch"
+    "start": "vite preview --port $PORT"
   },
   "dependencies": {
     "@chatscope/chat-ui-kit-react": "^1.10.1",
