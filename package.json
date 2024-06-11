@@ -14,6 +14,7 @@
     "aos": "^3.0.0-beta.6",
     "axios": "^1.6.5",
     "dotenv": "^16.4.4",
+    "@heroicons/react": "^2.1.1",
     "flowbite-react": "^0.7.2",
     "html5-qrcode": "^2.3.8",
     "jsonwebtoken": "^9.0.2",
